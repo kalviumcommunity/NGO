@@ -1,0 +1,4 @@
+ngo_name,program_type,cost,people_helped,outcome_score
+NGO_A,Education,5000,200,0.8
+NGO_B,Healthcare,8000,150,0.9
+NGO_C,Food,3000,300,0.7
