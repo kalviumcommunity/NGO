@@ -1,0 +1,4 @@
+Impact Summary
+
+This file represents generated outputs from processed data.
+It will later contain insights about high-impact NGO programs.
