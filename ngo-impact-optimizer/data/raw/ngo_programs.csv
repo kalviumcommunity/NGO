@@ -1,5 +1,5 @@
 ngo_name,program_type,location,cost,people_helped,outcome_score
 NGO_A,Education,Rural,5000,200,0.8
-NGO_B,Healthcare,Urban,8000,150,0.9
-NGO_C,Food,Rural,3000,300,0.7
-NGO_D,Education,Urban,7000,180,0.85
+NGO_B,Healthcare,Urban,8000,,0.9
+NGO_C,Food,Rural,,300,0.7
+NGO_D,Education,Urban,7000,180,
