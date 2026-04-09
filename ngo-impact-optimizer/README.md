@@ -1,148 +1,138 @@
-# NGO Impact Optimizer – Data Science Lifecycle Understanding
+# Understanding an Existing Data Science Repository
 
-## Part A: Understanding the Data Science Lifecycle
+## Part A: Project Intent & High-Level Flow
 
-### 1. Question → Data → Insight Lifecycle
+### 🔹 Project Intent
 
-Data science does not begin with models or algorithms. It begins with a **clear question**, followed by identifying the **right data**, and finally extracting **meaningful insights**.
+The repository is focused on solving a real-world problem using data, where the goal is to extract meaningful insights that support decision-making.
 
-#### 🔹 Starting with a Clear Question
+At its core, the project is trying to:
 
-Every data science project must begin with a well-defined question. Without a clear question, data analysis becomes directionless and may lead to irrelevant conclusions.
+* Understand patterns in the data
+* Identify relationships between variables
+* Use those patterns to answer a specific question or improve outcomes
 
-In this context, a question acts as:
-
-* A guide for what data to collect
-* A filter for what is relevant vs irrelevant
-* A foundation for decision-making
-
-For example, instead of asking:
-
-> “What does this data show?”
-
-A better question would be:
-
-> “Which NGO programs create the highest impact per unit cost?”
-
-This clarity ensures that every step that follows is purposeful.
+The emphasis is not just on analysis, but on generating insights that can guide actions.
 
 ---
 
-#### 🔹 Data as Evidence
+### 🔹 High-Level Data Science Workflow
 
-Once the question is defined, the next step is identifying and understanding the data.
+The repository follows a typical data science lifecycle:
 
-Data is not just numbers — it represents **real-world activities and outcomes**. Before analyzing it, we must understand:
+1. **Problem Understanding**
+   The project begins with a clear objective or question.
 
-* What each column represents
-* How the data was collected
-* Whether it is reliable and complete
+2. **Data Collection & Loading**
+   Raw data is gathered and loaded for processing.
 
-For example:
+3. **Data Cleaning & Preparation**
+   Handling missing values, correcting inconsistencies, and preparing the dataset for analysis.
 
-* `cost` represents resource investment
-* `people_helped` reflects outreach
-* `outcome_score` indicates effectiveness
+4. **Exploratory Data Analysis (EDA)**
+   Understanding patterns, distributions, and relationships through visualizations and summaries.
 
-Understanding data means asking:
+5. **Modeling / Analysis**
+   Applying statistical or machine learning methods to extract deeper insights or make predictions.
 
-* Is this data biased?
-* Is anything missing?
-* Does it truly represent the real-world situation?
-
-Without this understanding, analysis can be misleading.
+6. **Results & Insights**
+   Presenting findings in a way that supports decision-making.
 
 ---
 
-#### 🔹 Insights from Exploration
+### 🔹 How the Repository Structure Reflects This Flow
 
-Insights are not directly visible in raw data — they emerge through **exploration and reasoning**.
+The structure of the repository mirrors this lifecycle:
 
-This involves:
+* Early stages like **data collection and cleaning** are separated from analysis
+* Exploratory work is typically kept in notebooks
+* Final outputs and results are stored separately
 
-* Comparing values
-* Identifying patterns
-* Relating multiple variables
-
-For example:
-
-* A program helping more people may not always be the most effective
-* A higher cost program may still deliver better outcomes
-
-An insight would be:
-
-> “Healthcare programs in rural areas produce higher impact per cost compared to urban programs.”
-
-This kind of insight helps in making decisions, not just observing numbers.
+This separation helps maintain clarity and ensures that each stage of the workflow is organized and reproducible.
 
 ---
 
-### 🔗 How These Steps Connect
+## Part B: Repository Structure & File Roles
 
-* The **question** defines the purpose
-* The **data** provides the evidence
-* The **insight** delivers value
+### 🔹 Purpose of Key Folders
 
-If the question is unclear → wrong data is used
-If data is misunderstood → insights are incorrect
-If insights are weak → decisions fail
+* **data/**
+  Contains raw and possibly processed datasets. This is the foundation of the entire project.
 
-Thus, all three stages are deeply interconnected.
+* **notebooks/**
+  Used for exploratory data analysis (EDA).
+  This is where initial insights, visualizations, and experimentation take place.
 
----
+* **scripts/**
+  Contains reusable and structured code for data processing, modeling, or automation.
 
-## Part B: Applying the Lifecycle to a Project Context
-
-### 📌 Project Context: NGO Resource Allocation Optimization
-
-#### 🔹 The Question
-
-> “How can NGOs allocate their limited resources across different programs to maximize social impact?”
-
-This question focuses on improving decision-making under constraints.
+* **outputs/**
+  Stores generated results such as charts, reports, or model outputs.
 
 ---
 
-#### 🔹 The Data Needed
+### 🔹 Exploratory vs Finalized Work
 
-To answer this question, we would need structured data such as:
+* **Exploratory Work (Notebooks)**
 
-* Program type (Education, Healthcare, Food, etc.)
-* Cost of implementation
-* Number of people helped
-* Outcome effectiveness (impact score)
-* Location (Urban/Rural)
+  * Flexible and iterative
+  * Used for testing ideas and understanding data
+  * May contain temporary or experimental code
 
-Possible data sources:
+* **Finalized Work (Scripts)**
 
-* NGO internal reports
-* Public datasets (social welfare, health, education)
-* Surveys and field data collection
+  * Clean, reusable, and structured
+  * Used for production or repeatable workflows
+  * Less cluttered and more reliable
 
-This data represents both **effort (cost)** and **result (impact)**.
+This distinction is important because notebooks are for thinking, while scripts are for execution.
 
 ---
 
-#### 🔹 Useful Insights for Decision-Making
+### 🔹 Where Contributors Should Be Careful
 
-The goal is not just to analyze data, but to generate insights that help NGOs act.
+* Avoid modifying **raw data files** directly
+* Be cautious when editing **core scripts**, as they may affect the entire workflow
+* Ensure changes in notebooks do not break assumptions used in scripts
 
-Examples of useful insights:
+Understanding dependencies between files is critical before making changes.
 
-* “Education programs in rural areas have the highest impact per rupee spent.”
-* “Food programs reach more people but have lower long-term effectiveness.”
-* “Healthcare interventions show consistent outcomes across locations.”
+---
 
-These insights help NGOs:
+## Part C: Assumptions, Gaps, and Open Questions
 
-* Prioritize programs
-* Allocate budgets efficiently
-* Maximize real-world impact
+### 🔹 Assumptions
+
+* The data is assumed to be accurate and representative of the real-world problem
+* The selected features are assumed to be relevant for analysis
+* The problem definition is assumed to remain consistent throughout the project
+
+---
+
+### 🔹 Gaps & Open Questions
+
+* Some steps in data cleaning or preprocessing may not be fully documented
+* The origin and reliability of the dataset may not be clearly explained
+* It may be unclear how certain decisions were made during analysis
+
+These gaps can make it difficult for new contributors to fully understand the workflow.
+
+---
+
+### 🔹 Suggested Improvement
+
+One improvement would be to include a **clear data dictionary and workflow documentation**, explaining:
+
+* What each feature represents
+* How the data was processed step by step
+* The reasoning behind key decisions
+
+This would make the repository easier to understand, reproduce, and extend.
 
 ---
 
 ## ✅ Conclusion
 
-The value of data science lies not in complex models, but in **structured thinking**.
+Understanding an existing repository is about identifying the intent, workflow, and structure behind the code.
 
-By starting with the right question, understanding data as evidence, and extracting meaningful insights, we can solve real-world problems effectively — such as improving how NGOs create impact with limited resources.
+By analyzing how the project is organized and questioning its assumptions, we can contribute more effectively and improve the overall quality of the work.
