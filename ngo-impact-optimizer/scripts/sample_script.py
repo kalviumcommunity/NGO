@@ -1,0 +1,1 @@
+print("Script folder is ready")
