@@ -1,0 +1,21 @@
+NGO_Name,Program_Type,budget_usd,impact_reach,success_rate
+Green Earth,Reforestation,50000,1200,0.85
+Clean Water Initiative,Sanitation,30000,5000,0.92
+Tech for All,Education,75000,2000,0.78
+Health First,Vaccination,120000,15000,0.95
+Urban Bloom,Community Garden,15000,300,0.65
+Literacy Connect,Adult Literacy,25000,800,0.80
+Eco Shelter,Housing,100000,2500,0.89
+Rural Power,Energy,85000,1500,0.72
+Ocean Clean,Environment,60000,10000,0.88
+Youth Mentor,Education,20000,500,0.91
+Animal Safety,Rescue,12000,400,0.82
+Food Bank,Nutrition,40000,8000,0.94
+Skills Hub,Vocational,55000,1200,0.75
+Blind Support,Health,45000,600,0.96
+Drought relief,Water,150000,25000,0.90
+Seed Bank,Agri,35000,900,0.81
+Micro Loans,Finance,70000,3000,0.70
+Elderly Care,Social,30000,200,0.93
+Refugee Aid,Crisis,110000,5000,0.87
+Solar Schools,Energy,95000,1800,0.79
