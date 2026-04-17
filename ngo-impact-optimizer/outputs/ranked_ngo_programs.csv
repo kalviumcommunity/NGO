@@ -1,0 +1,21 @@
+,ngo_name,program_type,budget_usd,impact_reach,success_rate,cost_per_person,impact_score
+1,Drought relief,Water,150000,25000,0.9,6.0,0.9633
+2,Health First,Vaccination,120000,15000,0.95,8.0,0.816
+3,Ocean Clean,Environment,60000,10000,0.88,6.0,0.7143
+4,Food Bank,Nutrition,40000,8000,0.94,5.0,0.7048
+5,Clean Water Initiative,Sanitation,30000,5000,0.92,6.0,0.6477
+6,Refugee Aid,Crisis,110000,5000,0.87,22.0,0.6026
+7,Eco Shelter,Housing,100000,2500,0.89,40.0,0.5383
+8,Youth Mentor,Education,20000,500,0.91,40.0,0.513
+9,Micro Loans,Finance,70000,3000,0.7,23.333333333333332,0.5086
+10,Green Earth,Reforestation,50000,1200,0.85,41.666666666666664,0.5004
+11,Animal Safety,Rescue,12000,400,0.82,30.0,0.4971
+12,Tech for All,Education,75000,2000,0.78,37.5,0.496
+13,Literacy Connect,Adult Literacy,25000,800,0.8,31.25,0.4944
+14,Seed Bank,Agri,35000,900,0.81,38.888888888888886,0.4864
+15,Blind Support,Health,45000,600,0.96,75.0,0.4718
+16,Solar Schools,Energy,95000,1800,0.79,52.77777777777778,0.4699
+17,Skills Hub,Vocational,55000,1200,0.75,45.833333333333336,0.4582
+18,Rural Power,Energy,85000,1500,0.72,56.666666666666664,0.4339
+19,Urban Bloom,Community Garden,15000,300,0.65,50.0,0.4015
+20,Elderly Care,Social,30000,200,0.93,150.0,0.3255
