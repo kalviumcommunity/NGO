@@ -1,0 +1,201 @@
+:root {
+  --bg-color: #1a1cf19; /* A deep blackened-sage/olive background */
+  --bg-color: #151714;
+  --glass-bg: rgba(235, 230, 215, 0.04);
+  --glass-hover: rgba(235, 230, 215, 0.07);
+  --glass-border: rgba(235, 230, 215, 0.1);
+  --text-primary: #eae5d9;
+  --text-secondary: #99948a;
+  --accent-amber: #d4a353;
+  --accent-sage: #7a9c73;
+  --accent-terra: #c46d5e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-color);
+  background-image: radial-gradient(circle at 10% 20%, rgba(122, 156, 115, 0.1), transparent 40%),
+                    radial-gradient(circle at 90% 80%, rgba(212, 163, 83, 0.07), transparent 40%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.app-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  letter-spacing: -1px;
+}
+
+.title-gradient {
+  background: linear-gradient(135deg, var(--accent-amber), var(--accent-terra));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  font-weight: 300;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Glassmorphism Components */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-panel:hover {
+  border-color: rgba(235, 230, 215, 0.2);
+}
+
+.glass-header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.glass-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--accent-amber);
+}
+
+.glass-content {
+  padding: 2rem;
+}
+
+/* Grid Layouts */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .dashboard-grid {
+     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.dashboard-hero {
+  grid-column: 1 / -1;
+}
+
+/* Image styling */
+.dashboard-img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  display: block;
+}
+
+/* Table styling for CSV data */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th {
+  color: var(--accent-sage);
+  font-weight: 500;
+  padding: 1rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(235, 230, 215, 0.05);
+  color: var(--text-primary);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background: rgba(235, 230, 215, 0.02);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.badge-top { background: rgba(122, 156, 115, 0.15); color: var(--accent-sage); border: 1px solid rgba(122, 156, 115, 0.3); }
+.badge-mid { background: rgba(212, 163, 83, 0.15); color: var(--accent-amber); border: 1px solid rgba(212, 163, 83, 0.3); }
+.badge-low { background: rgba(196, 109, 94, 0.15); color: var(--accent-terra); border: 1px solid rgba(196, 109, 94, 0.3); }
+
+/* Score Bar styling */
+.score-bar-bg {
+  width: 100px;
+  height: 8px;
+  background: rgba(235, 230, 215, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.score-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-terra), var(--accent-amber), var(--accent-sage));
+  border-radius: 4px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color); 
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(235, 230, 215, 0.1); 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(235, 230, 215, 0.2); 
+}
